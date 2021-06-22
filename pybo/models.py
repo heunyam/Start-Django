@@ -13,7 +13,8 @@ class Question(Model):
     content = TextField()
     created_datetime = DateTimeField()
 
+
 class Answer(Model):
     question = ForeignKey(Question, on_delete=CASCADE)
     content = TextField()
-    created_datetime = DateTimeField
+    created_datetime = DateTimeField()

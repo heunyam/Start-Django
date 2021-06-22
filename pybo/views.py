@@ -1,10 +1,15 @@
+from django.views import View
 from django.shortcuts import render
 
-# Create your views here.
-from rest_framework.views import APIView
-from django.http import HttpResponse
+from pybo.models import Question
 
 
-class Index(APIView):
+class Index(View):
     def get(self, request):
-        return HttpResponse("Hello, Django!")
+
+        question_list = Question.objects.order_by('-created_datetime')
+        context = {
+            'question_list': question_list
+        }
+
+        return render(request, 'pybo/question_list.html', context)

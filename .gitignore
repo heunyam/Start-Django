@@ -3,6 +3,8 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,python,pycharm+all,windows
 
 ### Django ###
+config/settings.py
+
 *.log
 *.pot
 *.pyc

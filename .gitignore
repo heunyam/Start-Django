@@ -4,6 +4,7 @@
 
 ### Django ###
 config/settings.py
+poetry.lock
 
 *.log
 *.pot

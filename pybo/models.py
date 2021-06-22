@@ -13,6 +13,9 @@ class Question(Model):
     content = TextField()
     created_datetime = DateTimeField()
 
+    def __str__(self):
+        return self.subject
+
 
 class Answer(Model):
     question = ForeignKey(Question, on_delete=CASCADE)

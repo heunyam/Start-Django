@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import Index
+from .views import index, detail
 
 urlpatterns = [
-    path('', Index.as_view(), name="index")
+    path('', index, name="index"),
+    path('<int:question_id>', detail, name='detail')
 ]
